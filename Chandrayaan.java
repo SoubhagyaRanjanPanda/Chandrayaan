@@ -12,29 +12,36 @@ public class Chandrayaan {
                 D=Direction[i];
                 return (x,y,z,D);
             }
+            if(ch=='b'){
+                if(D='u'){
+                    z--;
+                    return (x,y,z,D);
+                }
+
+                else if (D=='d'){
+                    z++;
+                    return (x,y,z,D);
+                }
+                else{
+                    y--;
+                    D=Direction[i+2];
+                    return (x,y,z,D);
+                }
             if (ch=='r'){
                 D=Direction[i++];
                 return (x,y,z,D);
+            }
+            if(ch=='l'){
+            D=Direction[i--];
+            return (x,y,z,Direction);
             }
             if(ch=='u'){
                 D='U';
                 return (x,y,z,D);
             }
-            if(ch='b'){
-                if(D='U'){
-                    z--;
-                    return (x,y,z,D);
-                }
-
-                else if (D='d'){
-                    z++;
-                    return (x,y,z,D);
-                }
-                }
-            if(ch='l'){
-                D=Direction[i--];
-                return (x,y,z,Direction);
-            }
+            if(ch=='d'){
+                D='D';
+                return (x,y,z,D);
             }
         return result.toString().trim();
     }
